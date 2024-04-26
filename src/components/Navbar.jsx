@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
 
     const components = <>
-    <li><NavLink to='/'>Home</NavLink></li>
-    <li><NavLink to='/allArt'>All Art & craft Items</NavLink></li>
-    <li><NavLink to='/addCraft'>Add Craft Item</NavLink></li>
-    <li><NavLink to='/myArt'>My Art&Craft List</NavLink></li>
-    <li><NavLink to='/login'>Login</NavLink></li>
-    <li><NavLink to='/register'>Register</NavLink></li>
+    <li className='font-Roboto font-semibold'><NavLink className={({isActive})=> isActive? 'text-red-500 underline' : "text-black"} to='/'>Home</NavLink></li>
+    <li className='font-Roboto font-semibold'><NavLink className={({isActive})=> isActive? 'text-red-500 underline' : " "} to='/allArt'>All Art & craft Items</NavLink></li>
+    <li className='font-Roboto font-semibold'><NavLink className={({isActive})=> isActive? 'text-red-500 underline' : " "} to='/addCraft'>Add Craft Item</NavLink></li>
+    <li className='font-Roboto font-semibold'><NavLink className={({isActive})=> isActive? 'text-red-500 underline' : " "} to='/myArt'>My Art&Craft List</NavLink></li>
+    <li className='font-Roboto font-semibold '><NavLink className={({isActive})=> isActive? 'text-red-500 underline' : " "} to='/login'>Login</NavLink></li>
+    <li className='font-Roboto font-semibold'><NavLink className={({isActive})=> isActive? 'text-red-500 underline' : " "} to='/register'>Register</NavLink></li>
     </>
     return (
         <div>
@@ -23,7 +23,7 @@ const Navbar = () => {
                             {components}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <a className="btn btn-ghost text-xl font-bold text-pink-500 font-Roboto">Artify</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
