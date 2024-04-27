@@ -1,7 +1,33 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Navbar = () => {
+
+    const {user, logOut} = useContext(AuthContext)
+    const [showName, setShowName] = useState(false);
+    console.log("Login from eight", user);
+
+    console.log(user?.photoURL);
+    console.log(user?.email);
+    console.log(user?.displayName);
+    console.log("User object:", user);
+
+    //Handle logOut:
+    const handleLogOut = () => {
+        logOut()
+            .then(result => {
+                Swal.fire({
+                    title: "Successfully Logged out!",
+                    text: "You clicked the button!",
+                    icon: "success"
+                });
+
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
 
     const components = <>
     <li className='font-Roboto font-semibold'><NavLink className={({isActive})=> isActive? 'text-red-500 underline' : "text-black"} to='/'>Home</NavLink></li>
@@ -13,7 +39,7 @@ const Navbar = () => {
     </>
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,7 +57,23 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                {
+                        user ? <>
+
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar" onMouseEnter={() => setShowName(true)}
+                                onMouseLeave={() => setShowName(false)}>
+                                <div className="w-10 rounded-full">
+                                    <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
+                                </div>
+                            </div>
+                            {showName && <span className="tooltip tooltip-open tooltip-bottom" data-tip={user?.displayName} ></span>}
+                            {/* <span className='hidden lg:inline' >{user?.email}</span> */}
+                            <a onClick={handleLogOut} className="btn btn-info font-bold text-lg">Logout</a>
+
+                        </> :
+                            <Link to='/login'><button className='rounded-lg text-lg bg-slate-300 p-2 font-bold btn btn-info'>Login</button></Link>
+                    }
+                    
                 </div>
             </div>
         </div>

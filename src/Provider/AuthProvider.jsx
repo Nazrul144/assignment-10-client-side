@@ -1,20 +1,13 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
-import app from "../../firebaseProvider/firebase.config";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, } from "firebase/auth";
+import app from "../components/firebaseConfig/firebase.config";
 
  export const AuthContext = createContext(null)
  
 const AuthProvider = ({children}) => {
-    const [houses, setHouses] = useState([]);
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
-
-    useEffect(()=>{
-        fetch('houseData.json')
-        .then(res => res.json())
-        .then(data => setHouses(data));
-    },[])
 
     const auth = getAuth(app);
 
@@ -23,7 +16,6 @@ const AuthProvider = ({children}) => {
        return createUserWithEmailAndPassword(auth, email, password)
     }
 
-    
 
     const signInUser = (email, password) => {
         setLoading(true)
@@ -36,11 +28,9 @@ const AuthProvider = ({children}) => {
     }
 
 
-    
     useEffect(()=>{
    const unSubscribe = onAuthStateChanged(auth, currentUser =>{
             setUser(currentUser);
-            console.log('Observing current user', currentUser)
             setLoading(false)
         });
         return () =>{
@@ -50,7 +40,7 @@ const AuthProvider = ({children}) => {
     }, [] )
 
 
-    const authInfo = {houses, user, createUser, signInUser, loading, logOut}
+    const authInfo = {user, createUser, signInUser, loading, logOut}
    
     return (
         <AuthContext.Provider value={authInfo}>
