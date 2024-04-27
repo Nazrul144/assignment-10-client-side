@@ -85,6 +85,11 @@ const Login = () => {
             .then(result => {
                 const user = result.user
                 console.log(user);
+                Swal.fire({
+                    title: "Successfully logged in with Google!",
+                    text: "You clicked the button!",
+                    icon: "success"
+                  });
             })
             .catch(error => {
                 console.log('error', error.message)
@@ -96,6 +101,11 @@ const Login = () => {
             .then(result => {
                 const user = result.user
                 console.log(user);
+                Swal.fire({
+                    title: "Successfully logged in with Github!",
+                    text: "You clicked the button!",
+                    icon: "success"
+                  });
             })
             .catch(error => {
                 console.log('error', error.message)

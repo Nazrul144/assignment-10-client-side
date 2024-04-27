@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 
 import {
@@ -15,6 +14,8 @@ import Login from './components/Login.jsx'
 import Register from './components/Register.jsx'
 import Home from './components/Home.jsx'
 import AuthProvider from './Provider/AuthProvider.jsx'
+import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx'
+
 
 
 const router = createBrowserRouter([
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
     },
     {
       path:'/addCraft',
-      element: <AddCraft></AddCraft>
+      element: <PrivateRoute><AddCraft></AddCraft></PrivateRoute>
     },
     {
       path:'/myArt',
