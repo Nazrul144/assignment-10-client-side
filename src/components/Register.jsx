@@ -4,14 +4,16 @@ import { IoKey, IoMail } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
-import { useState } from 'react';
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithPopup } from 'firebase/auth';
+import { useContext, useState } from 'react';
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithPopup, updateProfile } from 'firebase/auth';
 import app from './firebaseConfig/firebase.config';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Register = () => {
 
     const [showPassword, setShowPassword] = useState(false);
     const [errorPassword, setErrorPassword] = useState('')
+    const {createUser} = useContext(AuthContext)
 
 
     const auth = getAuth(app);
@@ -39,15 +41,15 @@ const Register = () => {
             return;
         }
 
-        // createUser(email, password)
-        // .then(result => {
-        //     console.log(result.user)
+        createUser(email, password)
+        .then(result => {
+            console.log(result.user)
             
-        // })
-        // .catch(error => {
-        //     console.error(error)
+        })
+        .catch(error => {
+            console.error(error)
 
-        // })
+        })
 
 
          //Creating user:
@@ -64,6 +66,18 @@ const Register = () => {
          .catch(error => {
              console.error(error)
          })
+
+
+           //Update profile:
+           updateProfile(result.user,{    
+            displayName: username,
+            photoURL:photo
+            
+            })
+            .then(()=> console.log('Profile Updated!'))
+            .catch(error => {
+                console.log(error)
+            })
 
 
     }

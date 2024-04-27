@@ -66,7 +66,6 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email,password)
         .then(result =>{
             console.log(result.user)
-            
             setSuccess('Logged in successfully!')
         })
         .catch(error => {

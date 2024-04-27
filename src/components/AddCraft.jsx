@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2'
 
 const AddCraft = () => {
 
@@ -14,9 +15,29 @@ const AddCraft = () => {
         const email = e.target.email.value;
         const description = e.target.description.value;
 
-        const newData = {productName, photo, price, quantity, username, material, delivery, email, description }
+        const newMaterial = {productName, photo, price, quantity, username, material, delivery, email, description }
 
-        console.log('from 19',newData);
+        console.log('from 19',newMaterial);
+
+        //Send data to the server side:
+        fetch('http://localhost:5000/material', {
+            method:"POST",
+            headers:{
+                'content-type': 'application/json'
+            }, 
+            body: JSON.stringify(newMaterial)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: "Success!",
+                    text: "Material added successfully!",
+                    icon: "success"
+                  });
+            }
+        })
 
 
     }
