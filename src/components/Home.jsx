@@ -4,12 +4,19 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/bundle';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import Card from './Card';
 const Home = () => {
     const materials = useLoaderData()
     return (
         <div>
             <h1>This is home page</h1>
             <p>{materials.length}</p>
+            
+            <div className='grid md:grid-cols-2 lg:grid-cols-3'>
+            {
+                materials.map(item => <Card item={item}></Card>)
+            }
+            </div>
 
            <div className='w-full h-screen'>
             
