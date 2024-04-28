@@ -8,14 +8,16 @@ const AddCraft = () => {
         const productName = e.target.productName.value;
         const photo = e.target.photo.value;
         const price = e.target.price.value;
-        const quantity = e.target.quantity.value;
-        const delivery = e.target.delivery.value;
-        const material = e.target.material.value;
+        const subcategory = e.target.subcategory.value;
+        const rating = e.target.rating.value;
+        const customization = e.target.customization.value;
         const username = e.target.username.value;
+        const processing_time = e.target.processing_time.value;
         const email = e.target.email.value;
         const description = e.target.description.value;
+        const stockStatus = e.target.stockStatus.value;
 
-        const newMaterial = {productName, photo, price, quantity, username, material, delivery, email, description }
+        const newMaterial = {productName, photo, processing_time, price, rating, customization, subcategory, stockStatus, username, email, description }
 
         console.log('from 19',newMaterial);
 
@@ -51,7 +53,7 @@ const AddCraft = () => {
                 <div className='lg:flex gap-2'>
                     <div className='form-control md:w-1/2'>
                         <label className='label'>
-                            <span className='label-text'>Product Name:</span>
+                            <span className='label-text'>Image Name:</span>
                         </label>
                         <label className='input-group'>
                             <input type="text" name="productName" placeholder='Product Name' className='input input-bordered w-full' id="" />
@@ -70,18 +72,18 @@ const AddCraft = () => {
                 <div className='lg:flex gap-2'>
                     <div className='form-control md:w-1/2'>
                         <label className='label'>
-                            <span className='label-text'>Product Price:</span>
+                            <span className='label-text'>Subcategory_Name:</span>
                         </label>
                         <label className='input-group'>
-                            <input type="text" name="price" placeholder='Product Price' className='input input-bordered w-full' id="" />
+                            <input type="text" name="subcategory" placeholder='Subcategory Name' className='input input-bordered w-full' id="" />
                         </label>
                     </div>
                     <div className='form-control md:w-1/2'>
                         <label className='label'>
-                            <span className='label-text'>Quantity:</span>
+                            <span className='label-text'>Price</span>
                         </label>
                         <label className='input-group'>
-                            <input type="text" name="quantity" placeholder='Quantity' className='input input-bordered w-full' id="" />
+                            <input type="text" name="price" placeholder='Price' className='input input-bordered w-full' id="" />
                         </label>
                     </div>
                 </div>
@@ -89,18 +91,37 @@ const AddCraft = () => {
                 <div className='lg:flex gap-2'>
                     <div className='form-control md:w-1/2'>
                         <label className='label'>
-                            <span className='label-text'>Delivery Type:</span>
+                            <span className='label-text'>Rating:</span>
                         </label>
                         <label className='input-group'>
-                            <input type="text" name="delivery" placeholder='Delivery Type' className='input input-bordered w-full' id="" />
+                            <input type="text" name="rating" placeholder='Rating' className='input input-bordered w-full' id="" />
                         </label>
                     </div>
                     <div className='form-control md:w-1/2'>
                         <label className='label'>
-                            <span className='label-text'>Material:</span>
+                            <span className='label-text'>Customization-Example:</span>
                         </label>
                         <label className='input-group'>
-                            <input type="text" name="material" placeholder='Location' className='input input-bordered w-full' id="" />
+                            <input type="text" name="customization" placeholder='Customization' className='input input-bordered w-full' id="" />
+                        </label>
+                    </div>
+                </div>
+                {/*Delivery Type and Material*/}
+                <div className='lg:flex gap-2'>
+                    <div className='form-control md:w-1/2'>
+                        <label className='label'>
+                            <span className='label-text'>Processing_time:</span>
+                        </label>
+                        <label className='input-group'>
+                            <input type="text" name="processing_time" placeholder='Processing_time' className='input input-bordered w-full' id="" />
+                        </label>
+                    </div>
+                    <div className='form-control md:w-1/2'>
+                        <label className='label'>
+                            <span className='label-text'>StockStatus:</span>
+                        </label>
+                        <label className='input-group'>
+                            <input type="text" name="stockStatus" placeholder='StookStatus' className='input input-bordered w-full' id="" />
                         </label>
                     </div>
                 </div>
@@ -127,7 +148,7 @@ const AddCraft = () => {
                 <div>
                     <div className='form-control w-full'>
                         <label className='label'>
-                            <span className='label-text'>Description:</span>
+                            <span className='label-text'>Short Description:</span>
                         </label>
                         <label className='input-group'>
                             <input type="text" name="description" placeholder='Product Description' className='input input-bordered w-full mb-4' id="" />

@@ -26,7 +26,7 @@ const Register = () => {
         const photo = e.target.photo.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(username, photo, email, password);
+        console.log("print from register page", username, photo, email, password);
 
         //Reset the stat:
         setErrorPassword('')
@@ -62,13 +62,9 @@ const Register = () => {
                 text: "You clicked the button!",
                 icon: "success"
               });
-         })
-         .catch(error => {
-             console.error(error)
-         })
 
 
-           //Update profile:
+                //Update profile:
            updateProfile(result.user,{    
             displayName: username,
             photoURL:photo
@@ -78,6 +74,15 @@ const Register = () => {
             .catch(error => {
                 console.log(error)
             })
+
+
+         })
+         .catch(error => {
+             console.error(error)
+         })
+
+
+         
 
 
     }

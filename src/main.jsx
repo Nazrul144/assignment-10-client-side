@@ -15,6 +15,7 @@ import Register from './components/Register.jsx'
 import Home from './components/Home.jsx'
 import AuthProvider from './Provider/AuthProvider.jsx'
 import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx'
+import ViewDetails from './components/ViewDetails.jsx'
 
 
 
@@ -30,10 +31,12 @@ const router = createBrowserRouter([
       path:'/',
       element: <Home></Home>,
       loader: () => fetch('http://localhost:5000/material')
+
     },
     {
       path:'/allArt',
-      element: <AllArt></AllArt>
+      element: <AllArt></AllArt>,
+      loader: () =>fetch('http://localhost:5000/material')
     },
     {
       path:'/addCraft',
@@ -41,7 +44,8 @@ const router = createBrowserRouter([
     },
     {
       path:'/myArt',
-      element: <MyArt></MyArt>
+      element: <MyArt></MyArt>,
+      loader: () => fetch('')
     },
     {
       path:'/login',
@@ -50,6 +54,11 @@ const router = createBrowserRouter([
     {
       path:'/register',
       element: <Register></Register>
+    },
+    {
+      path: '/viewDetails/:id',
+      element: <ViewDetails></ViewDetails>,
+      loader: ({ params }) => fetch(`http://localhost:5000/material/${params._id}`)
     },
   
   ]

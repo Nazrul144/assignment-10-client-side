@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 
@@ -14,7 +14,6 @@ const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext)
     const [showName, setShowName] = useState(false);
-    console.log("Login from eight", user);
 
     // console.log(user?.photoURL);
     // console.log(user?.email);
