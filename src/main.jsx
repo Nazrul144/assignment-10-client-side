@@ -16,6 +16,8 @@ import Home from './components/Home.jsx'
 import AuthProvider from './Provider/AuthProvider.jsx'
 import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx'
 import ViewDetails from './components/ViewDetails.jsx'
+import About from './components/FooterPage/About.jsx'
+import Contact from './components/FooterPage/Contact.jsx'
 
 
 
@@ -31,7 +33,6 @@ const router = createBrowserRouter([
       path:'/',
       element: <Home></Home>,
       loader: () => fetch('http://localhost:5000/material')
-
     },
     {
       path:'/allArt',
@@ -59,6 +60,14 @@ const router = createBrowserRouter([
       path: '/viewDetails/:id',
       element: <ViewDetails></ViewDetails>,
       loader: ({ params }) => fetch(`http://localhost:5000/material/${params._id}`)
+    },
+    {
+      path: '/aboutus',
+      element:<About></About>,
+    },
+    {
+      path: '/contact',
+      element:<Contact></Contact>
     },
   
   ]
