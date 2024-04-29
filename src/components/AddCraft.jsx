@@ -1,8 +1,13 @@
-import React from 'react';
+import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { Typewriter } from 'react-simple-typewriter'
+import { AuthContext } from '../Provider/AuthProvider';
 
 const AddCraft = () => {
+
+    const { user } = useContext(AuthContext)
+
+    console.log(user);
 
     const handleAddCarft = (e) =>{
         e.preventDefault();
@@ -32,7 +37,7 @@ const AddCraft = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            console.log("the data is here",data)
             if(data.insertedId){
                 Swal.fire({
                     title: "Success!",
@@ -159,7 +164,7 @@ const AddCraft = () => {
                             <span className='label-text'>Email:</span>
                         </label>
                         <label className='input-group'>
-                            <input type="text" name="email" placeholder='Email' className='input input-bordered w-full' id="" />
+                            <input type="text" name="email" defaultValue={user.email} placeholder='Email' className='input input-bordered w-full' id="" />
                         </label>
                     </div>
                 </div>

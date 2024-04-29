@@ -45,8 +45,8 @@ const router = createBrowserRouter([
     },
     {
       path:'/myArt',
-      element: <MyArt></MyArt>,
-      loader: () => fetch('')
+      element: <PrivateRoute><MyArt></MyArt></PrivateRoute>
+     
     },
     {
       path:'/login',
@@ -57,9 +57,9 @@ const router = createBrowserRouter([
       element: <Register></Register>
     },
     {
-      path: '/viewDetails/:id',
+      path:'/viewDetails',
       element: <ViewDetails></ViewDetails>,
-      loader: ({ params }) => fetch(`http://localhost:5000/material/${params._id}`)
+
     },
     {
       path: '/aboutus',

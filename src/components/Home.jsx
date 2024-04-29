@@ -8,6 +8,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Card from './Card';
 import CraftCategoriesCard from './CraftCategoriesCard';
 import { AuthContext } from '../Provider/AuthProvider';
+import { Fade } from 'react-awesome-reveal';
 const Home = ({ children }) => {
     const { loading } = useContext(AuthContext)
     const materials = useLoaderData()
@@ -34,9 +35,9 @@ const Home = ({ children }) => {
         console.log(`Done after 15 loops!`)
     }
     return (
-        
+
         <div>
-            
+
             <div className='w-full h-screen'>
 
                 <Swiper
@@ -107,11 +108,14 @@ const Home = ({ children }) => {
                 </h1>
             </div>
 
+            <Fade cascade damping={0.1}>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
                     materialsToShow.map(item => <Card key={item._id} item={item}></Card>)
                 }
             </div>
+            </Fade>
+            
             {/* TypeWriter */}
             <div className='text-center'>
                 <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
@@ -130,11 +134,13 @@ const Home = ({ children }) => {
                     </span>
                 </h1>
             </div>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
-                {
-                    categories.map(category => <CraftCategoriesCard key={category._id} category={category}></CraftCategoriesCard>)
-                }
-            </div>
+            <Fade cascade damping={0.1}>
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+                    {
+                        categories.map(category => <CraftCategoriesCard key={category._id} category={category}></CraftCategoriesCard>)
+                    }
+                </div>
+            </Fade>
 
         </div>
     );
