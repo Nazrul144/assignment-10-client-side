@@ -56,7 +56,7 @@ const Home = ({ children }) => {
                     loop={true}
 
                 >
-                    <SwiperSlide> <div className="flex justify-center items-center bg-no-repeat bg-cover relative">
+                    <SwiperSlide> <div className="flex justify-center items-center bg-no-repeat bg-cover relative ">
                         <img src="/1.jpg" alt="" className="w-full h-auto" />
                         <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-2xl font-bold"><div className="w-96 h-56  bg-[#b0bfd9] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
                             Tremendous jute bag comfortable! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button></Link>

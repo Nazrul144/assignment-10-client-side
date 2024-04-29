@@ -1,7 +1,28 @@
 import React from 'react';
 
 const MyCard = ({item}) => {
-    const { productName, photo,  price, rating, customization,stockStatus} = item;
+    const { productName, photo,  price, rating, customization,stockStatus, _id} = item;
+
+   const handleDelete = (_id) => {
+    console.log(_id);
+    Swal.fire({
+        title: "Custom animation with Animate.css",
+        showClass: {
+          popup: `
+            animate__animated
+            animate__fadeInUp
+            animate__faster
+          `
+        },
+        hideClass: {
+          popup: `
+            animate__animated
+            animate__fadeOutDown
+            animate__faster
+          `
+        }
+      });
+   }
     return (
         <div>
                 <div className="card bg-base-100 shadow-xl">
@@ -16,7 +37,7 @@ const MyCard = ({item}) => {
                     <li>StockStatus: {stockStatus}</li>
                     <div className="card-actions">
                         <button className="btn btn-primary">Update</button>
-                        <button className="btn btn-secondary">Delete</button>
+                        <button onClick={()=> handleDelete(_id)} className="btn btn-secondary">Delete</button>
                     </div>
                 </div>
             </div>

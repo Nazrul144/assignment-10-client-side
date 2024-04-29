@@ -1,23 +1,11 @@
 
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Card = ({ item }) => {
-    const { productName, photo,  price, _id } = item;
+    const { productName, photo,  price } = item;
    
-    const handleDetails = (_id) =>{
-        fetch(`http://localhost:5000/material/${_id}`, {
-            method:'GET', 
-            headers:{
-                'content-type':'application-json'
-            },
-            body:JSON.stringify()
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-        })
-    }
 
     return (
         <div>
@@ -29,7 +17,7 @@ const Card = ({ item }) => {
                     <h2 className="card-title">{productName}</h2>
                     <p>Price: {price}</p>
                     <div className="card-actions">
-                        <Link to={'/viewDetails'} ><button onClick={()=> handleDetails(_id)} className="btn btn-primary">View Details</button></Link>
+                        <Link to={`/viewDetails/${item._id}`} ><button className="btn btn-primary">View Details</button></Link>
                     </div>
                 </div>
             </div>
