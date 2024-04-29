@@ -2,7 +2,7 @@
 const About = () => {
     return (
         <div>
-            <h1>This is about us page!</h1>
+            
             <div className='ml-8 mr-8'>
             <div className='mt-10'>
             <h3 className='text-xl font-bold text-sky-400 mt-6 animate__animated animate__fadeInRight'>About  Jute & wooden Crafts</h3>

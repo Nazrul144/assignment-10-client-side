@@ -3,7 +3,7 @@ import  { useContext, useEffect, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { IoKey, IoMail } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
-
+import { Typewriter } from 'react-simple-typewriter'
 import {useLocation, useNavigate} from 'react-router-dom'
 
 import Swal from 'sweetalert2'
@@ -110,11 +110,40 @@ const Login = () => {
                 console.log('error', error.message)
             })
     }
+
+    //TypeWriter:
+    const handleDone = () => {
+        console.log(`Done after 5 loops!`)
+      }
+
+
     return (
         <div >
             <div data-aos-easing="zoom-in-up" data-aos-duration='1000' className="loginDiv">
                 <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 shadow-xl mx-auto mt-32 lg:8 justify-center items-center">
-                    <h1 className="text-2xl font-bold text-center">Login</h1>
+     
+                    <div className='text-center'>
+                    <h1 style={{ margin: 'auto 0', fontWeight: 'normal' }}>
+                    
+                        <span style={{ color: 'red', fontWeight: 'bold' , fontSize: '24px'}}>
+                            <Typewriter
+                                words={['Login!']}
+                                loop={50}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                                onLoopDone={handleDone}
+
+                            />
+                        </span>
+                    </h1>
+                </div>
+
+
+
+
                     <form  onSubmit={handleLogin} noValidate="" action="" className="space-y-6 animate__animated animate__zoomIn">
                         <div className="space-y-1 text-sm">
                             <label htmlFor="username" className="block dark:text-gray-600">Email</label>

@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Typewriter } from 'react-simple-typewriter'
 import 'swiper/css';
 import 'swiper/css/bundle';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Card from './Card';
 import CraftCategoriesCard from './CraftCategoriesCard';
-const Home = () => {
+import { AuthContext } from '../Provider/AuthProvider';
+const Home = ({ children }) => {
+    const { loading } = useContext(AuthContext)
     const materials = useLoaderData()
     const materialsToShow = materials.slice(0, 6)
 
@@ -20,11 +23,20 @@ const Home = () => {
     }, [])
 
 
-    return (
-        <div>
-            <h1>This is home page</h1>
-            <p>{materials.length}</p>
+    if (loading) {
+        return <div className='flex justify-center items-center'>
+            <span className="loading loading-bars loading-md "></span>
+        </div>
+    }
 
+    //TypeWriter:
+    const handleDone = () => {
+        console.log(`Done after 15 loops!`)
+    }
+    return (
+        
+        <div>
+            
             <div className='w-full h-screen'>
 
                 <Swiper
@@ -77,8 +89,22 @@ const Home = () => {
                 </Swiper>
             </div>
 
-            <div>
-                <h1 className='font-bold font-Roboto text-3xl text-sky-400 text-center mt-12 mb-12'>Craft Items</h1>
+            <div className='text-center'>
+                <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
+                    <span style={{ color: 'red', fontWeight: 'bold', fontSize: '24px' }}>
+                        <Typewriter
+                            words={['Craft Items']}
+                            loop={40}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                            onLoopDone={handleDone}
+
+                        />
+                    </span>
+                </h1>
             </div>
 
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -86,14 +112,27 @@ const Home = () => {
                     materialsToShow.map(item => <Card key={item._id} item={item}></Card>)
                 }
             </div>
+            {/* TypeWriter */}
+            <div className='text-center'>
+                <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
+                    <span style={{ color: 'red', fontWeight: 'bold', fontSize: '24px' }}>
+                        <Typewriter
+                            words={['Art & Craft Categories']}
+                            loop={40}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                            onLoopDone={handleDone}
 
-            <div>
-                <h1 className='font-bold text-2xl mt-12 text-center mb-12'>Art & Craft Categories</h1>
+                        />
+                    </span>
+                </h1>
             </div>
-
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
-                    categories.map(category => <CraftCategoriesCard key={category._id}category={category}></CraftCategoriesCard>)
+                    categories.map(category => <CraftCategoriesCard key={category._id} category={category}></CraftCategoriesCard>)
                 }
             </div>
 

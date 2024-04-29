@@ -1,5 +1,6 @@
 import React from 'react';
 import Swal from 'sweetalert2'
+import { Typewriter } from 'react-simple-typewriter'
 
 const AddCraft = () => {
 
@@ -40,13 +41,31 @@ const AddCraft = () => {
                   });
             }
         })
-
-
     }
+
+    const handleDone = () => {
+        console.log(`Done after 5 loops!`)
+      }
 
     return (
         <div className='bg-[#F4F3F0] p-2 lg:p-24'>
-            <h1 className='text-center font-bold text-2xl'>Add Your Craft</h1>
+            <div className='text-center'>
+                <h1 style={{ margin: 'auto 0', fontWeight: 'normal' }}>
+                    <span style={{ color: 'red', fontWeight: 'bold', fontSize: '24px' }}>
+                        <Typewriter
+                            words={['Add Your Craft']}
+                            loop={40}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                            onLoopDone={handleDone}
+
+                        />
+                    </span>
+                </h1>
+            </div>
        
             <form onSubmit={handleAddCarft}>
                 {/*Product name and Photo*/}

@@ -9,7 +9,7 @@ const AllArt = () => {
             <h1>All Art{materials.length}</h1>
            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 h-full'>
            {
-                materials.map(item => <Card item={item}></Card>)
+                materials.map(item => <Card key={item._id} item={item}></Card>)
             }
            </div>
         </div>

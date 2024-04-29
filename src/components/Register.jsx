@@ -3,7 +3,7 @@ import { FaEye, FaEyeSlash, FaImages, FaUserEdit } from 'react-icons/fa';
 import { IoKey, IoMail } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
-
+import { Typewriter } from 'react-simple-typewriter'
 import { useContext, useState } from 'react';
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithPopup, updateProfile } from 'firebase/auth';
 import app from './firebaseConfig/firebase.config';
@@ -13,7 +13,7 @@ const Register = () => {
 
     const [showPassword, setShowPassword] = useState(false);
     const [errorPassword, setErrorPassword] = useState('')
-    const {createUser} = useContext(AuthContext)
+    const { createUser } = useContext(AuthContext)
 
 
     const auth = getAuth(app);
@@ -42,47 +42,47 @@ const Register = () => {
         }
 
         createUser(email, password)
-        .then(result => {
-            console.log(result.user)
-            
-        })
-        .catch(error => {
-            console.error(error)
+            .then(result => {
+                console.log(result.user)
 
-        })
+            })
+            .catch(error => {
+                console.error(error)
+
+            })
 
 
-         //Creating user:
-         createUserWithEmailAndPassword(auth, email, password)
-         .then(result => {
-             const user = result.user;
-             console.log('user from user in 70  number line',user)
-             Swal.fire({
-                title: "User Created Successfully!",
-                text: "You clicked the button!",
-                icon: "success"
-              });
+        //Creating user:
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user;
+                console.log('user from user in 70  number line', user)
+                Swal.fire({
+                    title: "User Created Successfully!",
+                    text: "You clicked the button!",
+                    icon: "success"
+                });
 
 
                 //Update profile:
-           updateProfile(result.user,{    
-            displayName: username,
-            photoURL:photo
-            
+                updateProfile(result.user, {
+                    displayName: username,
+                    photoURL: photo
+
+                })
+                    .then(() => console.log('Profile Updated!'))
+                    .catch(error => {
+                        console.log(error)
+                    })
+
+
             })
-            .then(()=> console.log('Profile Updated!'))
             .catch(error => {
-                console.log(error)
+                console.error(error)
             })
 
 
-         })
-         .catch(error => {
-             console.error(error)
-         })
 
-
-         
 
 
     }
@@ -94,39 +94,58 @@ const Register = () => {
     const githubProvider = new GithubAuthProvider()
 
     //Google authentication:
-    const handleGoogleSignIn = () =>{
+    const handleGoogleSignIn = () => {
         signInWithPopup(auth, googleProvider)
-        .then(result => {
-            console.log(result.user)
-        })
-        .catch(error =>{
-            console.log('error', error.message);
-        })
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.log('error', error.message);
+            })
     }
 
     //Github authentication:
-    const handleGithubSignIn = () =>{
+    const handleGithubSignIn = () => {
         signInWithPopup(auth, githubProvider)
-        .then(result => {
-            console.log(result.user);
-        })
-        .catch(error =>{
-            console.log('error', error.message);
-        })
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.log('error', error.message);
+            })
     }
 
 
+//TypeWriter:
+    const handleDone = () => {
+        console.log(`Done after 5 loops!`)
+      }
 
 
-
-
-    
     return (
         <div>
             <h1>This is Register page</h1>
 
             <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 mt-44 lg:mt-8 mx-auto shadow-xl">
-                <h1 className="text-2xl font-bold text-center">Register Now!</h1>
+                <div className='text-center'>
+                    <h1 style={{ margin: 'auto 0', fontWeight: 'normal' }}>
+                  
+                        <span style={{ color: 'red', fontWeight: 'bold' , fontSize: '24px'}}>
+                         
+                            <Typewriter
+                                words={['Register Now!']}
+                                loop={50}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                                onLoopDone={handleDone}
+
+                            />
+                        </span>
+                    </h1>
+                </div>
 
 
                 <form data-aos-easing="zoom-in" data-aos-duration='2000' onSubmit={handleRegister} noValidate="" action="" className="space-y-6  animate__animated animate__zoomIn">
