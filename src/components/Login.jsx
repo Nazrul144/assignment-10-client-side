@@ -5,7 +5,6 @@ import { IoKey, IoMail } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter'
 import {useLocation, useNavigate} from 'react-router-dom'
-
 import Swal from 'sweetalert2'
 import app from "./firebaseConfig/firebase.config";
 import { AuthContext } from "../Provider/AuthProvider";

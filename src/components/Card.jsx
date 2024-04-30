@@ -1,12 +1,10 @@
 
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 const Card = ({ item }) => {
-    const { productName, photo,  price } = item;
-   
 
+    const { productName, photo,  price } = item;
+    
     return (
         <div>
             <div className="card bg-base-100 shadow-xl">

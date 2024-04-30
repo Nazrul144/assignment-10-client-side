@@ -1,5 +1,6 @@
-import React from 'react';
 
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 const AllArtCard = ({ item }) => {
     const { productName, price, rating } = item;
 
@@ -22,11 +23,13 @@ const AllArtCard = ({ item }) => {
                 </tbody>
             </table>
             <div className='flex justify-between mb-12 mt-2'>
-                <button className='btn btn-secondary'>View Details</button>
+                <Link to={`/viewDetails/${item._id}`} className='btn btn-secondary'>View Details</Link>
             
             </div>
         </div>
     );
 };
-
+AllArtCard.propTypes = {
+    item: PropTypes.node
+};
 export default AllArtCard;
