@@ -54,6 +54,22 @@
       "rating": 5,
       "review": "Fantastiska produkter från CraftedEcoChic! Jag älskar hur de kombinerar skönhet med hållbarhet.",
       "image": "https://i.ibb.co/4pK6v90/image-1000x1000-6.png"
+    },
+    {
+      "id": 7,
+      "name": "Ale Kande",
+      "location": "Germany",
+      "rating": 5,
+      "review": " Facinating exporting and communicating business with Jute and wooden Bangladeshi product.",
+      "image": "https://i.ibb.co/Q8svvcZ/image-1000x1000-7.png"
+    },
+    {
+      "id": 7,
+      "name": "Mia Andersson",
+      "location": "Stockholm, Sweden",
+      "rating": 5,
+      "review": "Fantastic products from CraftedEcoChic! I appreciate how they combine aesthetics with sustainability",
+      "image": "https://i.ibb.co/QFW69HN/image-1000x1000-8.png"
     }
    
   ]

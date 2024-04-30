@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { FaRegStar } from "react-icons/fa";
 import { Link, useLoaderData } from 'react-router-dom'
 const ViewDetails = () => {
@@ -5,7 +6,9 @@ const ViewDetails = () => {
     console.log(data);
     return (
         <div>
-            <h1>View Details</h1>
+            <Helmet>
+                <title>CraftedEcoChic | View Details</title>
+            </Helmet>
 
             <section className="bg-gray-800 dark:bg-gray-100 text-gray-100 dark:text-gray-800">
                 <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">

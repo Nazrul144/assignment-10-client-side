@@ -8,6 +8,7 @@ import { useContext, useState } from 'react';
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithPopup, updateProfile } from 'firebase/auth';
 import app from './firebaseConfig/firebase.config';
 import { AuthContext } from '../Provider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
 
@@ -124,7 +125,9 @@ const Register = () => {
 
     return (
         <div>
-   
+           <Helmet>
+                <title>CraftedEcoChic | Register</title>
+            </Helmet>
             <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 mt-44 mb-20 lg:mt-8 mx-auto shadow-xl">
                 <div className='text-center'>
                     <h1 style={{ margin: 'auto 0', fontWeight: 'normal' }}>

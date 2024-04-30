@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { Typewriter } from 'react-simple-typewriter'
 import { AuthContext } from '../Provider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const AddCraft = () => {
 
@@ -54,6 +55,9 @@ const AddCraft = () => {
 
     return (
         <div className='p-2 lg:p-24 mt-36 md:mt-4 lg:mt-2'>
+            <Helmet>
+                <title>CraftedEcoChic | Add Craft</title>
+            </Helmet>
             <div className='text-center'>
                 <h1 style={{ margin: 'auto 0', fontWeight: 'normal' }}>
                     <span style={{ color: 'red', fontWeight: 'bold', fontSize: '24px' }}>

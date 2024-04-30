@@ -3,6 +3,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import MyCard from './MyCard';
 import {useLoaderData} from 'react-router-dom'
 import { Typewriter } from 'react-simple-typewriter'
+import { Helmet } from 'react-helmet-async';
 const MyArt = () => {
     const loadingMaterials = useLoaderData()
     const { user } = useContext(AuthContext)
@@ -18,6 +19,9 @@ const MyArt = () => {
     },[user?.email])
     return (
         <div >
+            <Helmet>
+                <title>CraftedEcoChic | My Art&Craft</title>
+            </Helmet>
               <div className='text-center'>
                 <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
                     <span style={{ color: 'red', fontWeight: 'bold', fontSize: '24px' }}>

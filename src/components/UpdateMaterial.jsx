@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import {useLoaderData} from 'react-router-dom'
 import Swal from 'sweetalert2'
 const UpdateMaterial = () => {
@@ -45,6 +46,9 @@ console.log(_id)
     }
     return (
         <div className='bg-[#F4F3F0] p-2 lg:p-24'>
+            <Helmet>
+                <title>CraftedEcoChic | Update Page</title>
+            </Helmet>
             <h1 className='text-2xl font-bold text-center'>Update Material{productName}</h1>
         <form onSubmit={handleUpdateMaterial} >
             {/*Product name and Photo*/}

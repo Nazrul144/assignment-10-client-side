@@ -5,7 +5,7 @@ const ClientCard = ({ person }) => {
     const { name, location, rating, image, review } = person;
     return (
         <div>
-            <div className="card h-full bg-base-200 shadow-xl">
+            <div className="card h-full bg-base-200 shadow-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
                 <div className="rounded-full overflow-hidden mx-auto mt-4" style={{ width: '120px', height: '120px' }}>
                     <img className="w-full h-full object-cover" src={image} alt="Shoes" />
                 </div>

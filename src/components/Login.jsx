@@ -8,6 +8,7 @@ import {useLocation, useNavigate} from 'react-router-dom'
 import Swal from 'sweetalert2'
 import app from "./firebaseConfig/firebase.config";
 import { AuthContext } from "../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     
@@ -118,6 +119,9 @@ const Login = () => {
 
     return (
         <div >
+            <Helmet>
+                <title>CraftedEcoChic | Login</title>
+            </Helmet>
             <div data-aos-easing="zoom-in-up" data-aos-duration='1000' className="loginDiv">
                 <div className="w-full max-w-md mb-20 p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 shadow-xl mx-auto mt-32 lg:8 justify-center items-center">
      

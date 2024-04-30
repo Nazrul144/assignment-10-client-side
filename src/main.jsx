@@ -19,7 +19,7 @@ import ViewDetails from './components/ViewDetails.jsx'
 import About from './components/FooterPage/About.jsx'
 import Contact from './components/FooterPage/Contact.jsx'
 import UpdateMaterial from './components/UpdateMaterial.jsx'
-import FurnitureCard from './components/subComponents/FurnitureCard.jsx'
+import {  HelmetProvider } from 'react-helmet-async';
 
 
 const router = createBrowserRouter([
@@ -90,7 +90,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-    <RouterProvider router={router} />
+        <HelmetProvider>
+            <RouterProvider router={router} />
+        </HelmetProvider>
     </AuthProvider>
   </React.StrictMode>,
 )

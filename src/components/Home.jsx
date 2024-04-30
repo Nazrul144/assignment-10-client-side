@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState,  } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Typewriter } from 'react-simple-typewriter'
@@ -11,6 +11,8 @@ import { AuthContext } from '../Provider/AuthProvider';
 import { Fade } from 'react-awesome-reveal';
 import ClientCard from './ClientCard';
 import Marquee from "react-fast-marquee";
+import NewArival from './NewArival';
+import { Helmet } from 'react-helmet-async';
 
 
 const Home = ({ children }) => {
@@ -19,6 +21,7 @@ const Home = ({ children }) => {
     const materialsToShow = materials.slice(0, 6)
 
     const [reviewsData, setReviewsData] = useState([])
+    const [newArivals, setNewArivals] = useState([])
 
     const [categories, setCategories] = useState([])
     useEffect(() => {
@@ -37,6 +40,14 @@ const Home = ({ children }) => {
         })
     },[])
 
+    useEffect(()=>{
+        fetch('newArival.json')
+        .then(res => res.json())
+        .then(data => {
+           setNewArivals(data)
+        })
+    },[])
+
 
     if (loading) {
         return <div className='flex justify-center items-center'>
@@ -51,6 +62,9 @@ const Home = ({ children }) => {
     return (
 
         <div>
+              <Helmet>
+                <title>CraftedEcoChic | Home</title>
+            </Helmet>
 
             <div className='w-full h-screen mt-44 md:mt-0'>
 
@@ -161,7 +175,7 @@ const Home = ({ children }) => {
                 <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
                     <span style={{ color: 'red', fontWeight: 'bold', fontSize: '28px' }}>
                         <Typewriter
-                            words={['Our top 7 client review']}
+                            words={['Our top 9 client review']}
                             loop={40}
                             cursor
                             cursorStyle='_'
@@ -185,6 +199,37 @@ const Home = ({ children }) => {
                                 reviewsData.map(person => <ClientCard key={person.id} person={person}></ClientCard>)
                             }
                         </div>
+
+
+                            <div className='new arival'>
+                            <div className='text-center'>
+                <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
+                    <span style={{ color: 'red', fontWeight: 'bold', fontSize: '28px' }}>
+                        <Typewriter
+                            words={['New Arival']}
+                            loop={40}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                            onLoopDone={handleDone}
+
+                        />
+                    </span>
+                </h1>
+            </div>
+            <Marquee className='text-4xl text-orange font-bold' pauseOnHover={true}>
+               New Arival New Product. Very exciting item for home decor and enjoy. Very eco-friendly and commercial. Available for all over the world!
+            </Marquee>
+                                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12 mb-20'>
+                                    {
+                                        newArivals.map(newArival => <NewArival key={newArival.id} newArival={newArival}></NewArival>)
+                                    }
+                                </div>
+                            </div>
+
+
         </div>
     );
 };

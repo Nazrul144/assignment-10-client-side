@@ -1,11 +1,15 @@
 
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet-async';
 const AllArtCard = ({ item }) => {
     const { productName, price, rating, subcategory } = item;
 
     return (
         <div>
+             <Helmet>
+                <title>CraftedEcoChic | All Art&Craft</title>
+            </Helmet>
             <table className='w-full bg-[#F2D2BD] rounded-lg mt-44 md:mt-4'>
                 <tbody>
                     <tr>

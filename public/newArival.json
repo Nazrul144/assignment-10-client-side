@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "Handwoven Jute Basket",
+      "description": "Beautiful handwoven basket made from natural jute fibers, perfect for organizing your home in an eco-friendly way.",
+      "price": 24.99,
+      "image": "https://i.ibb.co/Pxrt5yh/image-1500x1000-9.png"
+    },
+    {
+      "id": 2,
+      "name": "Wooden Tea Coasters Set",
+      "description": "Set of 6 wooden tea coasters crafted from sustainably sourced wood, adding a touch of nature to your tea time.",
+      "price": 14.99,
+      "image": "https://i.ibb.co/D5GCYdC/image-1500x1000-10.png"
+    },
+    {
+      "id": 3,
+      "name": "Bamboo Cutting Board",
+      "description": "High-quality bamboo cutting board, durable and environmentally friendly, ideal for your kitchen.",
+      "price": 19.99,
+      "image": "https://i.ibb.co/t4CsBf9/image-1500x1000-11.png"
+    },
+    {
+      "id": 4,
+      "name": "Handcrafted Wooden Bowl",
+      "description": "Exquisite wooden bowl handcrafted from reclaimed wood, perfect for serving salads.",
+      "price": 29.99,
+      "image": "https://i.ibb.co/X8bF1fy/81-K8-JU0-HYVL-AC-SL1500.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Rattan Plant Basket",
+      "description": "Charming rattan basket for your indoor plants, adding a touch of bohemian style to your home decor.",
+      "price": 19.99,
+      "image": "https://i.ibb.co/zXhrbNK/image-1500x1000-12.png"
+    },
+    {
+      "id": 6,
+      "name": "Recycled Glass Vase",
+      "description": "Elegant glass vase made from recycled materials, perfect for displaying fresh flowers or dried arrangements.",
+      "price": 34.99,
+      "image": "https://i.ibb.co/yY8dGcP/image-1500x1000-13.png"
+    }
+  ]
+  
