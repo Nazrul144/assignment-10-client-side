@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
 const MyCard = ({ item, items, setItems }) => {
   const { productName, photo, price, rating, customization, stockStatus, _id } = item;
-console.log(items, setItems);
+
   const handleDelete = (_id) => {
     console.log(_id);
 
@@ -55,7 +55,8 @@ console.log(items, setItems);
           <li> <span className='text-red-400 font-bold'>StockStatus:</span> {stockStatus}</li>
           <div className="card-actions">
       
-            <Link to={`update/${_id}`}><button className="btn btn-primary">Update</button></Link>
+            <Link to={`/update/${_id}`}><button className="btn btn-primary">Update</button></Link>
+            {/* <Link to='/update'>Update</Link> */}
             <button onClick={() => handleDelete(_id)} className="btn btn-secondary">Delete</button>
           </div>
         </div>

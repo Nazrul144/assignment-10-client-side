@@ -8,8 +8,6 @@ const MyArt = () => {
     const { user } = useContext(AuthContext)
     const [items, setItems] =  useState(loadingMaterials);
 
-    console.log(loadingMaterials);
-    
 
     useEffect(()=>{
         fetch(`http://localhost:5000/myMaterial/${user?.email}`)
@@ -17,7 +15,7 @@ const MyArt = () => {
         .then(data =>{
             setItems(data);
         })
-    },[])
+    },[user?.email])
     return (
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12'>
             {

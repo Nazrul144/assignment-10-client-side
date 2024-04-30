@@ -18,7 +18,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx'
 import ViewDetails from './components/ViewDetails.jsx'
 import About from './components/FooterPage/About.jsx'
 import Contact from './components/FooterPage/Contact.jsx'
-import Update from './components/Update.jsx'
+import UpdateMaterial from './components/UpdateMaterial.jsx'
 
 
 const router = createBrowserRouter([
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
     },
     {
       path:'/myArt',
-      element: <PrivateRoute><MyArt></MyArt></PrivateRoute>,//for test purpose
+      element: <PrivateRoute><MyArt></MyArt></PrivateRoute>,//loading data for the myArt component
       loader : () => fetch('http://localhost:5000/material')
     },
    
@@ -72,14 +72,13 @@ const router = createBrowserRouter([
     },
     {
       path: '/update/:id',
-      element: <Update></Update>,
-      loader: ({params}) => fetch(`http://localhost:5000/material/${params.id}`)
-    },
-    // {
-    //   path:'/updateMaterial/:id',
-    //   element: <UpdateMaterial></UpdateMaterial>,
-    //   loader: ({params})=> fetch(`http://localhost:5000/material/${params.id}`)
-    // },
+      element:<UpdateMaterial></UpdateMaterial>,
+      loader: ({params})=> {
+        console.log(params)
+        return fetch(`http://localhost:5000/material/${params.id}`)
+      }
+    }
+  
  
   ]
   
