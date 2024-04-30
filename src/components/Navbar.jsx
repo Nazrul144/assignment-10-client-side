@@ -71,7 +71,7 @@ const Navbar = () => {
                             {components}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl font-bold text-pink-500 font-Roboto">Artify</a>
+                    <a className="btn btn-ghost text-xl font-bold text-pink-500 font-Roboto">CraftedEcoChic</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
