@@ -20,6 +20,8 @@ import About from './components/FooterPage/About.jsx'
 import Contact from './components/FooterPage/Contact.jsx'
 import UpdateMaterial from './components/UpdateMaterial.jsx'
 import {  HelmetProvider } from 'react-helmet-async';
+import CraftCategoriesCard from './components/CraftCategoriesCard.jsx'
+import SubCategoryCard from './components/SubCategoryCard.jsx'
 
 
 const router = createBrowserRouter([
@@ -79,6 +81,10 @@ const router = createBrowserRouter([
         return fetch(`http://localhost:5000/material/${params.id}`)
       }
     }, 
+    {
+      path:'subcategory/:name',
+      element: <SubCategoryCard></SubCategoryCard>
+    }
 
  
   ]

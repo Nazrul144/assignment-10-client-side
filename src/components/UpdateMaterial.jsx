@@ -49,7 +49,7 @@ console.log(_id)
             <Helmet>
                 <title>CraftedEcoChic | Update Page</title>
             </Helmet>
-            <h1 className='text-2xl font-bold text-center'>Update Material{productName}</h1>
+            <h1 className='text-2xl font-bold text-center'>Update Material</h1>
         <form onSubmit={handleUpdateMaterial} >
             {/*Product name and Photo*/}
             <div className='lg:flex gap-2'>
