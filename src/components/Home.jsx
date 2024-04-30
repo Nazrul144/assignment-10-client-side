@@ -38,7 +38,7 @@ const Home = ({ children }) => {
 
         <div>
 
-            <div className='w-full h-screen'>
+            <div className='w-full h-screen mt-44 md:mt-0'>
 
                 <Swiper
                     spaceBetween={30}
@@ -58,33 +58,33 @@ const Home = ({ children }) => {
                 >
                     <SwiperSlide> <div className="flex justify-center items-center bg-no-repeat bg-cover relative ">
                         <img src="/1.jpg" alt="" className="w-full h-auto" />
-                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-2xl font-bold"><div className="w-96 h-56  bg-[#b0bfd9] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
-                            Tremendous jute bag comfortable! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button></Link>
+                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-2xl font-bold"><div className="w-44 h-24 lg:w-96 lg:h-56 bg-[#b0bfd9] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="lg:p-6 lg:ml-4">
+                            Tremendous jute bag comfortable! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary lg:mt-3 lg:text-xl lg:font-bold hover:bg-[tomato] duration-1000 ease-in-out hover:text-black border-none">Contact us</button></Link>
                         </p></div></h1>
 
                     </div></SwiperSlide>
                     <SwiperSlide>  <div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                         <img src="/2.jpg" alt="" className="w-full h-auto" />
-                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#b0bfd9] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
-                            Royal sofa and beautiful! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button></Link>
+                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-bold"><div className=" w-44 h-24 lg:w-96 lg:h-56  bg-[#b0bfd9] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="lg:p-6 lg:ml-4">
+                            Royal sofa and beautiful! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary lg:mt-3 lg:text-xl lg:font-bold hover:bg-[tomato] duration-1000 ease-in-out hover:text-black border-none">Contact us</button></Link>
                         </p></div></h1>
                     </div></SwiperSlide>
                     <SwiperSlide>  <div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                         <img src="/3.jpg" alt="" className="w-full h-auto" />
-                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#b0bfd9] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
-                            Wooden Utensils and Kitchenware! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button></Link>
+                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-bold"><div className="w-44 h-24 lg:w-96 lg:h-56   bg-[#b0bfd9] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="lg:p-6 lg:ml-4">
+                            Wooden Utensils and Kitchenware! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary lg:mt-3 lg:text-xl lg:font-bold hover:bg-[tomato] duration-1000 ease-in-out hover:text-black border-none">Contact us</button></Link>
                         </p></div></h1>
                     </div></SwiperSlide>
                     <SwiperSlide>  <div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                         <img src="/4.jpg" alt="" className="w-full h-auto" />
-                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#b0bfd9] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
-                            Jute and wooden jewellery! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button></Link>
+                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-bold"><div className="w-44 h-24 lg:w-96 lg:h-56  bg-[#b0bfd9] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="lg:p-6 lg:ml-4">
+                            Jute and wooden jewellery! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary lg:mt-3 lg:text-xl lg:font-bold hover:bg-[tomato] duration-1000 ease-in-out hover:text-black border-none">Contact us</button></Link>
                         </p></div></h1>
                     </div></SwiperSlide>
                     <SwiperSlide>  <div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                         <img src="/5.jpg" alt="" className="w-full h-auto" />
-                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#b0bfd9] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
-                            Gorgeous chair for the people! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button></Link>
+                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-bold"><div className="w-44 h-24 lg:w-96 lg:h-56 bg-[#b0bfd9] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="lg:p-6 lg:ml-4">
+                            Gorgeous chair for the people! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary lg:mt-3 lg:text-xl lg:font-bold hover:bg-[tomato] duration-1000 ease-in-out hover:text-black border-none">Contact us</button></Link>
                         </p></div></h1>
                     </div></SwiperSlide>
                 </Swiper>
@@ -109,7 +109,7 @@ const Home = ({ children }) => {
             </div>
 
             <Fade cascade damping={0.1}>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-16'>
                 {
                     materialsToShow.map(item => <Card key={item._id} item={item}></Card>)
                 }
@@ -135,7 +135,7 @@ const Home = ({ children }) => {
                 </h1>
             </div>
             <Fade cascade damping={0.1}>
-                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+                <div className='grid md:grid-cols-2 mt-16 lg:grid-cols-3 gap-4 mb-20'>
                     {
                         categories.map(category => <CraftCategoriesCard key={category._id} category={category}></CraftCategoriesCard>)
                     }

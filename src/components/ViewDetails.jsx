@@ -32,8 +32,8 @@ const ViewDetails = () => {
                         <li><span className='text-sky-400 font-bold'>Email: </span>{data.email}</li>
                         <li><span className='text-green-500 font-bold'>Description: </span>{data.description}</li>
                         <div className=" mt-4 flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                            <Link to='/' rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50">Back to home</Link>
-                            <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold border rounded border-gray-100 dark:border-gray-800">Explore More</a>
+                            <Link to='/' rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50 hover:bg-[tomato] duration-1000 ease-in-out hover:text-black border-none">Back to home</Link>
+                            <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold border rounded border-gray-100 dark:border-gray-800 hover:bg-[orange] duration-1000 ease-in-out hover:text-black border-none">Explore More</a>
                         </div>
                     </div>
                 </div>

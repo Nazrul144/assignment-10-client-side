@@ -2,15 +2,19 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 const AllArtCard = ({ item }) => {
-    const { productName, price, rating } = item;
+    const { productName, price, rating, subcategory } = item;
 
     return (
         <div>
-            <table className='w-full bg-[#F2D2BD] rounded-lg'>
+            <table className='w-full bg-[#F2D2BD] rounded-lg mt-44 md:mt-4'>
                 <tbody>
                     <tr>
                         <td>Product Name:</td>
                         <td>{productName}</td>
+                    </tr>
+                    <tr>
+                        <td>Subcategory:</td>
+                        <td>{subcategory}</td>
                     </tr>
                     <tr>
                         <td>Price:</td>
@@ -23,7 +27,7 @@ const AllArtCard = ({ item }) => {
                 </tbody>
             </table>
             <div className='flex justify-between mb-12 mt-2'>
-                <Link to={`/viewDetails/${item._id}`} className='btn btn-secondary'>View Details</Link>
+                <Link to={`/viewDetails/${item._id}`} className='btn btn-secondary duration-800 ease-in-out hover:bg-[tomato] hover:text-black'>View Details</Link>
             
             </div>
         </div>

@@ -7,7 +7,6 @@ const AllArt = () => {
     console.log(materials);
     return (
         <div>
-            <h1>All Art{materials.length}</h1>
            <div>
            {
                 materials.map(item => <AllArtCard key={item._id} item={item}></AllArtCard>)

@@ -43,7 +43,7 @@ const MyCard = ({ item, items, setItems }) => {
   }
   return (
     <div>
-      <div className="card bg-base-100 shadow-xl">
+      <div className="card h-full bg-base-100 shadow-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 md:mt-4 ">
         <figure className="px-10 pt-10">
           <img src={photo} alt="Shoes" className="rounded-xl" />
         </figure>

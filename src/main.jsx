@@ -19,6 +19,7 @@ import ViewDetails from './components/ViewDetails.jsx'
 import About from './components/FooterPage/About.jsx'
 import Contact from './components/FooterPage/Contact.jsx'
 import UpdateMaterial from './components/UpdateMaterial.jsx'
+import FurnitureCard from './components/subComponents/FurnitureCard.jsx'
 
 
 const router = createBrowserRouter([
@@ -77,8 +78,8 @@ const router = createBrowserRouter([
         console.log(params)
         return fetch(`http://localhost:5000/material/${params.id}`)
       }
-    }
-  
+    }, 
+
  
   ]
   

@@ -124,9 +124,8 @@ const Register = () => {
 
     return (
         <div>
-            <h1>This is Register page</h1>
-
-            <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 mt-44 lg:mt-8 mx-auto shadow-xl">
+   
+            <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 mt-44 mb-20 lg:mt-8 mx-auto shadow-xl">
                 <div className='text-center'>
                     <h1 style={{ margin: 'auto 0', fontWeight: 'normal' }}>
                   
