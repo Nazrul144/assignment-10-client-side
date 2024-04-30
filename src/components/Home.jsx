@@ -9,10 +9,16 @@ import Card from './Card';
 import CraftCategoriesCard from './CraftCategoriesCard';
 import { AuthContext } from '../Provider/AuthProvider';
 import { Fade } from 'react-awesome-reveal';
+import ClientCard from './ClientCard';
+import Marquee from "react-fast-marquee";
+
+
 const Home = ({ children }) => {
     const { loading } = useContext(AuthContext)
     const materials = useLoaderData()
     const materialsToShow = materials.slice(0, 6)
+
+    const [reviewsData, setReviewsData] = useState([])
 
     const [categories, setCategories] = useState([])
     useEffect(() => {
@@ -22,6 +28,14 @@ const Home = ({ children }) => {
                 setCategories(data)
             })
     }, [])
+
+    useEffect(()=>{
+        fetch('review.json')
+        .then(res => res.json())
+        .then(data => {
+            setReviewsData(data);
+        })
+    },[])
 
 
     if (loading) {
@@ -135,13 +149,42 @@ const Home = ({ children }) => {
                 </h1>
             </div>
             <Fade cascade damping={0.1}>
-                <div className='grid md:grid-cols-2 mt-16 lg:grid-cols-3 gap-4 mb-20'>
+                <div className='grid md:grid-cols-2 mt-16 lg:grid-cols-3 gap-4 mb-12'>
                     {
                         categories.map(category => <CraftCategoriesCard key={category._id} category={category}></CraftCategoriesCard>)
                     }
                 </div>
             </Fade>
 
+            <div className='extra section client review'>
+            <div className='text-center'>
+                <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
+                    <span style={{ color: 'red', fontWeight: 'bold', fontSize: '28px' }}>
+                        <Typewriter
+                            words={['Our top 7 client review']}
+                            loop={40}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                            onLoopDone={handleDone}
+
+                        />
+                    </span>
+                </h1>
+            </div>
+
+            <Marquee className='text-4xl text-blue-400 font-bold' pauseOnHover={true}>
+                We export our product in all over the world. Explore our exquisite collections, indulge in opulent amenities, and experience the epitome of refined living. Welcome to a world of splendor.
+            </Marquee>
+                     
+            </div>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-16'>
+                            {
+                                reviewsData.map(person => <ClientCard key={person.id} person={person}></ClientCard>)
+                            }
+                        </div>
         </div>
     );
 };

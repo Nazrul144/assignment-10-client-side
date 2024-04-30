@@ -16,7 +16,6 @@ const ViewDetails = () => {
                         <li><span className='text-green-500 font-bold'>Product Name: </span>{data.productName}</li>
                         <li><span className='text-green-500 font-bold'>Processing Time: </span>{data.processing_time}</li>
                         <li><span className='text-green-500 font-bold'>Price: </span>{data.price}</li>
-                        {/* <li><span className='text-green-500 font-bold'>Rating: </span>{data.rating}  <FaRegStar /></li> */}
                         <li>
                             <span className='text-green-500 font-bold'>Rating: </span>
                             <div style={{ display: 'inline-flex', alignItems: 'center' }}>

@@ -1,0 +1,60 @@
+[
+    {
+      "id": 1,
+      "name": "Sarah Johnson",
+      "location": "New York, USA",
+      "rating": 5,
+      "review": "Absolutely love the products from CraftedEcoChic! The craftsmanship is top-notch, and I appreciate their commitment to sustainability.",
+      "image": "https://i.ibb.co/Zhhsrd8/image-1000x1000.png"
+    },
+    {
+      "id": 2,
+      "name": "Rahul Gupta",
+      "location": "Mumbai, India",
+      "rating": 4,
+      "review": "Impressed with the quality of wooden crafts I purchased. They add a rustic charm to my home décor.",
+      "image": "https://i.ibb.co/8bnXCmT/image-1000x1000-1.png"
+    },
+    {
+      "id": 3,
+      "name": "Sophie Dubois",
+      "location": "Paris, France",
+      "rating": 5,
+      "review": "As an eco-conscious consumer, I'm thrilled to find a brand like CraftedEcoChic. Their products are not only beautiful but also sustainable. Highly recommend!",
+      "image": "https://i.ibb.co/hd48xnS/image-1000x1000-2.png"
+    },
+    {
+      "id": 4,
+      "name": "Alejandro Lopez",
+      "location": "Mexico City, Mexico",
+      "rating": 4,
+      "review": "Me encanta la calidad de los productos de CraftedEcoChic. Son únicos y le dan un toque especial a mi hogar.",
+      "image": "https://i.ibb.co/L5SmyJL/image-1000x1000-3.png"
+    },
+    {
+      "id": 5,
+      "name": "Emma Smith",
+      "location": "London, UK",
+      "rating": 5,
+      "review": "CraftedEcoChic has become my go-to place for sustainable gifts. The recipients always adore the unique items I choose from here!",
+      "image": "https://i.ibb.co/qBRv26g/image-1000x1000-4.png"
+    },
+    {
+      "id": 6,
+      "name": "Hiroshi Tanaka",
+      "location": "Tokyo, Japan",
+      "rating": 4,
+      "review": "クラフテッドエコシックの商品の品質に感銘を受けました。家の内装に自然な雰囲気をプラスしてくれます。",
+      "image": "https://i.ibb.co/zHMBRhK/image-1000x1000-5.png"
+    },
+    {
+      "id": 7,
+      "name": "Mia Andersson",
+      "location": "Stockholm, Sweden",
+      "rating": 5,
+      "review": "Fantastiska produkter från CraftedEcoChic! Jag älskar hur de kombinerar skönhet med hållbarhet.",
+      "image": "https://i.ibb.co/4pK6v90/image-1000x1000-6.png"
+    }
+   
+  ]
+  
