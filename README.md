@@ -31,7 +31,7 @@ CraftedEcoChic is an online platform highlighting a curated selection of eco-fri
 
 ## To clone and run this project locally, follow these steps:
 - Clone the repository from GitHub.
-- Install dependencies using npm install.
+- Install dependencies using "npm install".
 - Configure Firebase credentials.
 - Start the development server using npm start.
 
