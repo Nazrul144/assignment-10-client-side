@@ -1,5 +1,5 @@
 # Project Overview: 
-CraftedEcoChic offers a sophisticated website showcasing eco-friendly products crafted with sustainable materials. From furniture to home décor, each item reflects our commitment to environmental consciousness and artisanal craftsmanship. Using HTML, CSS, Tailwind CSS, JavaScript, React, Firebase, and Slick Slider, our site ensures a seamless browsing experience. Explore our collection and embrace eco-friendly living without sacrificing style or quality.
+CraftedEcoChic offers a sophisticated website showcasing eco-friendly products crafted with sustainable materials. From furniture to home décor, each item reflects our commitment to environmental consciousness and artisanal craftsmanship. Using HTML, CSS, Tailwind CSS, JavaScript, React, Firebase, MongoDb and Node.js, our site ensures a seamless browsing experience.
 
 
 
