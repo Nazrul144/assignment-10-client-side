@@ -12,11 +12,6 @@ CraftedEcoChic is an online platform highlighting a curated selection of eco-fri
 - Filtering Functionality
 
 
-# Implement of three packages:
-- React-simple-typewriter
-- React Awesome reveal
-- swiper-slider
-
 # Used Technologies:
 - HTML
 - CSS
