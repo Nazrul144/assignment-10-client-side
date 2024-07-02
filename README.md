@@ -32,7 +32,7 @@ CraftedEcoChic presents a refined online platform dedicated to showcasing a cura
 
 # Running Locally:
 
-- To clone and run this project locally, follow these steps:
+## To clone and run this project locally, follow these steps:
 - Clone the repository from GitHub.
 - Install dependencies using npm install.
 - Configure Firebase credentials.
